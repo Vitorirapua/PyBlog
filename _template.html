@@ -23,34 +23,90 @@
 
         <header>
 
-            <div>
+            <!-- Ao clicar vai para a página inicial -->
+            <a href="/" title="Clique para acessar a pagina inicial.">
                 <img src="images/logo.png" alt="Logotipo do Pyblog">
-                <h1>Pyblog
+                <h1>PyBlog
                     <small>Para quem entede de cobras</small>
                 </h1>
-            </div>
+            </a>
 
             <!-- Formulário de busca -->
             <form action="/search.html" method="get">
-                <input type="search" name="q" id="headerSearch">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass fa-fw"></i></button>
+                <input type="search" name="q" id="headerSearch" placeholder="Procurar por...">
+                <button type="submit" title="Clique para iniciar a busca"><i class="fa-solid fa-magnifying-glass fa-fw"></i></button>
             </form>
 
         </header>
 
-        <nav></nav>
+        <nav>
+            <a href="/" title="Ir para a página inicial">
+                <i class="fa-solid fa-house fa-fw"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="/contacts.html" title="Ir para faça contato">
+                <i class="fa-solid fa-comments fa-fw"></i>
+                <span>Contatos</span>
+            </a>
+            <a href="/about.html" title="Saiba mais sobre agente">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>Sobre</span>
+            </a>
+        </nav>
 
         <main>
 
             <article>
-               
+  
+<h2>Titulo do artigo</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque recusandae iure, quia a, delectus officiis id illum explicabo accusamus voluptates quisquam error minus tempora sit, cum repellendus quam itaque quaerat!</p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ullam ea repellat, id eos laudantium deleniti. Officia, illum quo voluptatibus at eum voluptatum repellat minus, eligendi, quae exercitationem fugiat nostrum?</p>
+<img src="https://picsum.photos/200/200" alt="Imagem aleatória">                
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos minus cumque maxime aut perferendis nobis beatae corrupti ex magni dolorem quis, amet consectetur optio itaque eius tenetur consequuntur impedit doloremque?</p>
+
             </article>
 
 
-            <aside></aside>
+            <aside>
+
+                <h3>Veja também</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p>Repellendus asperiores aut voluptas architecto consequuntur.</p>
+
+            </aside>
         </main>
 
-        <footer>Rodapé</footer>
+        <footer class="site-title">
+            
+            <div class="footer_top">
+
+                <a href="/">HOME</a>
+                <div>&copy; Copyright 2024 Joca da Silva</div>
+                <a href="#top">TOPO</a>
+
+            </div>
+
+            <div class="footer_botton">
+
+                <nav class="social">
+                    <a href="https://facebook"></a>
+                    <a href="https://insta"></a>
+                    <a href="https://github"></a>
+                </nav>
+
+                <nav class="fast">
+                    <a href="/policyes.html"></a>
+                    <a href="/contacts.html"></a>
+                    <a href="/about.html"></a>
+                </nav>
+
+            </div>
+
+        </footer>
+
+
+        </footer>
+
     </div>
 
 
