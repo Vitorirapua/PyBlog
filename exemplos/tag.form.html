@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Formulários</title>
+    <style>
+        #formCadastro label.break {
+            display: block;
+            padding-bottom: .5rem;
+        }
+   
+    </style>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+
+    <p>Altere ente os metodos "Get" e "Post" para ver a diferença de comportamento</p>
+
+    <form action="#" method="post">
+
+        <p>Logue-se com as suas credenciais</p>
+
+        <p>
+            <label for="fieldLoguin">Login:</label>
+            <input type="text" name="loguin" id="fieldLoguin">
+        </p>
+
+        <p>
+            <label for="fieldPassword">Senha</label>
+            <input type="password" name="password" id="fieldPassword">
+        </p>
+
+        <p>
+            <!-- <input type="submit" value="Entar"> -->
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpar</button>
+        </p>
+
+    </form>
+
+    <h2>Buscando no Google</h2>
+    <form action="https://google.com/search" method="get" target="_blank">
+        <label for="fieldSearch">Procurar</label>
+        <input type="search" name="q" id="fieldSearch">
+        <button type="submit">Vai</button>
+    </form>
+
+    <h2>Cadastro de gente</h2>
+
+    <form action="#" method="post" id="formCadastro">
+
+        <p>
+            <label for="fieldName" class="break">Nome completo:</label>
+            <input type="text" name="name" id="fieldName" placeholder="Preencha com o seu nome completo" required
+                minlength="3" value="Vitor" readonly>
+        </p>
+        <p>
+            <label for="fieldNascimento" class="break">Nascimento</label>
+            <input type="date" name="Nascimento" id="fieldNascimento" required>
+        </p>
+        <p>
+            <label for="fieldEmail" class="break">Seu e-mail principal:</label>
+            <input type="email" name="email" id="fieldEmail" placeholder="Seu endereço de email mais usado" required>
+        </p>
+
+        <p>
+            <label for="fieldPass1" class="break">Crie uma senha:</label>
+            <input type="password" name="password" id="fieldPass1" required minlength="7" maxlength="16">
+        </p>
+
+        <p>
+            <label for="fieldPass1" class="break">Repita a senha:</label>
+            <input type="password" name="password" id="fieldPass1" required minlength="7" maxlength="16">
+        </p>
+
+        <p>
+            <label>Formação:</label>
+            <label>
+                <input type="radio" name="formacao" value="Fundamental" checked> Fundamental
+            </label>
+            &nbsp; &nbsp;
+            <label>
+                <input type="radio" name="formacao" value="medio"> Médio
+            </label>
+            &nbsp; &nbsp;
+            <label>
+                <input type="radio" name="formacao" value="superior"> Superior
+            </label>
+        </p>
+
+        <p>
+            <labe class="break">Idiomas</labe>
+            <label>
+                <input type="checkbox" name="idioma[]" value="Ingles">Ingles
+            </label>
+            &nbsp; &nbsp;
+            <label>
+                <input type="checkbox" name="idioma[]" value="Espanhol">Espanhol
+            </label>
+            &nbsp; &nbsp;
+            <label>
+                <input type="checkbox" name="idioma[]" value="Chinês">Chinês
+            </label>
+            &nbsp; &nbsp;
+        </p>
+
+
+        <p>
+            <label for="fieldBairro">Bairro:</label>
+            <select name="bairro" id="fieldBairro" required>
+                <option value="">-- selecione um --</option>
+                <option value="Campo Grande" selected>Campo Grande</option>
+                <option value="Vasconcelos">Vasconcelos</option>
+                <option value="Bangu">Bangu</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="fieldColor">Cor favorita</label>
+            <input type="color" name="Cor" id="fieldColor">
+        </p>
+
+
+
+        <button type="submit">Cadastrar</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+
+</body>
+
+</html>
