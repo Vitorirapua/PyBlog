@@ -17,8 +17,7 @@ input,
 button {
     font-family: inherit;
     font-size: inherit;
-    padding: .5rem .75rem;
-    border: none;
+    
 }
 
 /* Reset dos Links */
@@ -137,6 +136,8 @@ body {
     flex-grow: 1;
     border-radius: .3rem 0 0 .3rem;
     background-color: rgb(255, 255, 255);
+    padding: .5rem .75rem;
+    border: none;
 }
 
 #wrap>header form button {
@@ -144,6 +145,7 @@ body {
     background-color: rgb(255, 255, 255);
     padding-left: .25rem;
     padding-right: .25rem;
+    border: none;
 }
 
 #wrap>header form button:hover {
