@@ -6,7 +6,7 @@
 
 /* Reset para que o CSS seja o mesmo em todos os navegadores modernos */
 
-/* Reset das caixas */
+/* Reset de todas as caixas */
 * {
     box-sizing: border-box;
     outline: none;
@@ -14,13 +14,13 @@
 
 /* Reset de formulários */
 input,
+textarea,
 button {
     font-family: inherit;
     font-size: inherit;
-    
 }
 
-/* Reset dos Links */
+/* Reset dos links */
 a {
     text-decoration: none;
     color: steelblue;
@@ -28,13 +28,13 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: rgb(255, 69, 0);
+    color: orangered;
 }
 
 html,
 body,
 #wrap {
-     /* Reset dos elementos raiz */
+    /* Reset dos elementos raiz */
     /* Para usar height=100% */
     position: relative;
     width: 100%;
@@ -67,7 +67,7 @@ body {
     min-width: 280px;
     /* Bloco centralizado */
     margin: auto;
-    /* STICK FOOTER  */
+    /* Sticky footer */
     display: flex;
     flex-direction: column;
 }
@@ -78,10 +78,14 @@ body {
 #wrap>footer,
 #wrap>main>article,
 #wrap>main>aside {
-    margin: .5rem;
+    margin: .5rem .5rem 0 .5rem;
     border-radius: .5rem;
 }
 
+#wrap>main>aside {
+    margin-left: 0;
+    border-radius: .5rem;
+}
 
 /*********************
  ***** Cabeçalho *****
@@ -111,27 +115,28 @@ body {
     font-size: 2.5rem;
     letter-spacing: .25rem;
     text-align: center;
-    /* Experimental */
+    /* Experimental → Alica borda no texto */
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
 #wrap>header small {
     display: block;
-    font-size: .72rem;
+    font-size: .7rem;
     letter-spacing: normal;
     font-weight: normal;
     color: rgb(255, 255, 255);
-    /* Experimental */
+    /* Experimental → Remove borda no texto  */
     -webkit-text-stroke: 0;
 }
 
-/* Botão menu principal  */
-#toggleMenu{
+/* Botão do menu principal em mobile */
+
+#toggleMenu {
     margin-left: auto;
     margin-right: .5rem;
 }
 
-#toggleMenu i{
+#toggleMenu i {
     color: white;
     font-size: 2rem;
     cursor: pointer;
@@ -155,8 +160,7 @@ body {
 #wrap>header form button {
     border-radius: 0 .3rem .3rem 0;
     background-color: rgb(255, 255, 255);
-    padding-left: .25rem;
-    padding-right: .25rem;
+    padding: .5rem .25rem;
     border: none;
 }
 
@@ -170,37 +174,36 @@ body {
  *************************/
 
 #wrap>nav {
-        background-color: rgba(0, 0, 0, .9);
-        display: flex;
-        /* align-items: center; */
-        flex-direction: column;
-        position: absolute;
-        top: 9rem;
-        z-index: 1000;
-    }
-
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 9rem;
+    z-index: 1000;
+    width: 220px;
+}
 
 #wrap>nav a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     display: flex;
     /* align-items: center; */
-    padding: .7rem;
+    padding: 1rem;
     transition: .2s;
+    border-bottom: 1px dotted grey;
+}
+
+#wrap>nav a:last-child {
+    border-bottom: none;
 }
 
 #wrap>nav a:hover {
     color: rgb(255, 165, 0);
 }
 
-/* Link de Início */
-#wrap>nav a:first-child {
-    margin-right: auto;
-}
-
 #wrap>nav i {
-    font-size: 2rem;
-    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    margin-right: .5rem;
 }
 
 #wrap>nav span {
@@ -213,7 +216,7 @@ body {
  ****************************/
 
 #wrap>main {
-    /* Stick Footert  */
+    /* Sticky Footer */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -222,7 +225,7 @@ body {
 #wrap>main>article {
     background-color: rgba(255, 255, 255, .9);
     padding: 1rem;
-    /* Stick Footert  */
+    /* Sticky Footer */
     flex-grow: 1;
 }
 
@@ -236,21 +239,21 @@ body {
     padding: 1rem;
 }
 
-/****************************
- ********* Rodapé ***********
- ****************************/
+/******************
+ ***** Rodapé *****
+ ******************/
 
 #wrap>footer {
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 #wrap>footer a {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 #wrap>footer a:hover {
-    color: orangered;
+    color: orange;
     text-decoration: none;
 }
 
@@ -258,8 +261,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 0rem;
-    border-bottom: 1px dotted rgb(128, 128, 128);
+    padding: .5rem 0;
+    border-bottom: 1px dotted gray;
 }
 
 .footer_top a i {
@@ -271,92 +274,97 @@ body {
     font-size: small;
 }
 
-.footer_button {
+.footer_botton {
     display: flex;
     justify-content: space-around;
-    padding: 1rem 0rem;
+    padding: 1rem 0;
 }
 
-.footer_button nav {
+.footer_botton nav {
     display: flex;
     flex-direction: column;
-    line-height: 1.7;
+    line-height: 1.9;
 }
 
-.footer_button nav h4 {
-    margin: 0;
+.footer_botton nav h4 {
+    margin: 0 0 .5rem 0;
 }
 
-.footer_button nav a {
+.footer_botton nav a {
     margin-left: 1rem;
 }
 
+/********************************************
+ ***** Resoluções de 640 pixels ou mais *****
+ ***** Usando Media Queries             *****
+ ********************************************/
 
-/*************************************
-** RESOLOÇÕES DE 640 PIXELS OU MAIS **
-** USANDO MEDIA QUERIES **************
-*************************************/
+@media screen and (min-width: 600px) {
 
-@media screen and (min-width: 575px) {
-    /* Altera o cabeçalho  */
+    /* Altera o cabeçalho */
     #wrap>header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    /* Altera o menu  */
-    #wrap>nav a{
+    #wrap>nav {
         flex-direction: row;
+        justify-content: flex-end;
+        position: initial;
+        width: auto;
     }
-    #wrap>nav a i{
-        font-size: 1.2rem;
-        margin: 0 .30rem 0 0;
+
+    #wrap>nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: flex;
+        padding: 1rem;
+        transition: .2s;
+        border-bottom: 1px dotted grey;
+    }
+
+    #wrap>nav a:first-child {
+        margin-right: auto;
+    }
+
+    #toggleMenu,
+    #menuSmoke {
+        display: none;
     }
 }
 
 @media screen and (min-width: 640px) {
+
     #wrap>main {
         flex-direction: row;
     }
 
-    #wrap>main>aside{
+    #wrap>main>aside {
         min-width: 12.5rem;
         max-width: 12.5rem;
     }
+
 }
 
-@media screen and (min-width: 440px) {
-    .footer_top div {
-        font-size: 1rem;
-    }
-}
+/********************************
+ ***** Estilos de uso geral *****
+ ********************************/
 
-@media screen and (min-width: 1000px) {
-    .footer_top div {
-        font-size: 1.1rem;
-    }
-}
-
-
-
-/*********************
-***Estilos de uso geral
-**********************/
-
-.center{
+.center {
     text-align: center;
 }
 
-.red{
+.red {
     color: red;
 }
 
-#fumaca {
-    top: 9rem;
+
+#menuSmoke {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(100,100,100,.5);
+    background: rgba(0, 0, 0, .5);
+    top: 9rem;
     z-index: 100;
 }
